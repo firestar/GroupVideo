@@ -51,12 +51,12 @@
 		<testSourceDirectory>.</testSourceDirectory>
 		<resources>
 		  <resource>
-			<directory>src/main/resources</directory>
+			<directory>.</directory>
 		  </resource>
 		</resources>
 		<testResources>
 		  <testResource>
-			<directory>src/test/resources</directory>
+			<directory>.</directory>
 		  </testResource>
 		</testResources>
 		<plugins>
@@ -86,7 +86,7 @@
 				<configuration>
 				  <source>1.6</source>
 				  <target>1.6</target>
-				  <encoding>${project.build.sourceEncoding}</encoding>
+				  <encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 
