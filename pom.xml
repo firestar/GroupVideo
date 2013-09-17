@@ -10,24 +10,26 @@
   <name>Group Video</name>
   <url>http://video.synload.com/group</url>
   <build>
-	  <plugin>
-		  <artifactId>maven-assembly-plugin</artifactId>
-		  <configuration>
-			<archive>
-			  <manifest>
-				<mainClass>com.synload.groupvideo.m</mainClass>
-			  </manifest>
-			</archive>
-		  </configuration>
-		  <executions>
-			<execution>
-			  <id>make-assembly</id>
-			  <phase>package</phase>
-			  <goals>
-				<goal>single</goal>
-			  </goals>
-			</execution>
-		  </executions>
-		</plugin>
+	  <plugins>
+		  <plugin>
+			  <artifactId>maven-assembly-plugin</artifactId>
+			  <configuration>
+				<archive>
+				  <manifest>
+					<mainClass>com.synload.groupvideo.m</mainClass>
+				  </manifest>
+				</archive>
+			  </configuration>
+			  <executions>
+				<execution>
+				  <id>make-assembly</id>
+				  <phase>package</phase>
+				  <goals>
+					<goal>single</goal>
+				  </goals>
+				</execution>
+			  </executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
