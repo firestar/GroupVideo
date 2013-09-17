@@ -2,9 +2,9 @@ language: java
 jdk:
   - openjdk7
   - oraclejdk7
-notifications
-  recipients
+notifications:
+  recipients:
     - nathaniel.davidson@gmail.com
-branches
-  only
+branches:
+  only:
     - master
