@@ -48,7 +48,7 @@
 		<defaultGoal>clean install</defaultGoal>
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
-		<finalName>${artifactId}-${version}</finalName>
+		<finalName>${project.artifactId}-${project.artifactId}</finalName>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
 		<sourceDirectory>.</sourceDirectory>
 		<scriptSourceDirectory>.</scriptSourceDirectory>
