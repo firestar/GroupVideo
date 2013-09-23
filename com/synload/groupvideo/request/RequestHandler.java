@@ -79,9 +79,9 @@ public class RequestHandler{
                     if(server.clientGroup.containsKey(conn)){
                         Group group = server.getGroup(server.clientGroup.get(conn));
                         if(group.getOwner()==conn){
-                            group.sendData(server.jsonbuilder.load(obj.getString("movie_id"),obj.getString("title")));
+                            group.sendData(server.jsonbuilder.load(obj.getString("movie_url"),obj.getString("title")));
                             group.groupTitle = obj.getString("title");
-                            group.groupVideo = obj.getString("movie_id");
+                            group.groupVideo = obj.getString("movie_url");
                             System.out.println(server.clientName.get(conn)+" changed the video to \""+obj.getString("title")+"\"");
                         }else{
                             //add vote here!
