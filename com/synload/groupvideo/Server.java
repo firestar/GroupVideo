@@ -49,7 +49,7 @@ public class Server extends WebSocketServer {
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         User user = new User(conn, this);
-        user.sendMessage("Welcome to AnimeCap!","System");
+        //user.sendMessage("Welcome to GroupVideo!","System");
         user.sendResponseData(this.jsonbuilder.user_nick());
         System.out.println(conn+" connected");
     }
