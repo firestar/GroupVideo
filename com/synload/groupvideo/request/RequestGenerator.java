@@ -26,7 +26,7 @@ public class RequestGenerator{
         JSONObject retJSON = new JSONObject();
         try {
             retJSON.put("action", "new_user");
-            retJSON.put("name", escapeHTML(name));
+            retJSON.put("name", name);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -149,29 +149,7 @@ public class RequestGenerator{
         return retJSON.toString();
     }
     public String escapeHTML(String s) {
-        StringBuffer sb = new StringBuffer();
-        int n = s.length();
-        for (int i = 0; i < n; i++) {
-          char c = s.charAt(i);
-          switch (c) {
-          case '<':
-            sb.append("&lt;");
-            break;
-          case '>':
-            sb.append("&gt;");
-            break;
-          case '&':
-            sb.append("&amp;");
-            break;
-          case '"':
-            sb.append("&quot;");
-            break;
-
-          default:
-            sb.append(c);
-            break;
-          }
-        }
-        return sb.toString();
+        s = s.replaceAll(">", "&gt;").replaceAll("<","&lt;").replaceAll("\"","&quot;");
+        return s;
       }
 }
