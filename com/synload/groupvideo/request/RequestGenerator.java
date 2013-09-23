@@ -36,7 +36,7 @@ public class RequestGenerator{
         JSONObject retJSON = new JSONObject();
         try {
             retJSON.put("action", "user_left");
-            retJSON.put("name", escapeHTML(user));
+            retJSON.put("name", user);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -82,7 +82,7 @@ public class RequestGenerator{
         JSONObject retJSON = new JSONObject();
         try {
             retJSON.put("action", "new_owner");
-            retJSON.put("name", escapeHTML(owner));
+            retJSON.put("name", owner);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -111,7 +111,7 @@ public class RequestGenerator{
         try {
             retJSON.put("action", "load");
             retJSON.put("movie_url", movie_id);
-            retJSON.put("title", escapeHTML(title));
+            retJSON.put("title", title);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -121,8 +121,8 @@ public class RequestGenerator{
         JSONObject retJSON = new JSONObject();
         try {
             retJSON.put("action", "message");
-            retJSON.put("name", escapeHTML(name));
-            retJSON.put("text", escapeHTML(msg));
+            retJSON.put("name", name);
+            retJSON.put("text", msg);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -132,7 +132,7 @@ public class RequestGenerator{
         JSONObject retJSON = new JSONObject();
         try {
             retJSON.put("action", "disconnect");
-            retJSON.put("reason", escapeHTML(reason));
+            retJSON.put("reason", reason);
         } catch (JSONException e) {
             e.printStackTrace();
         }
